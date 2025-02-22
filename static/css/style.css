@@ -1,0 +1,192 @@
+:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --secondary-color: #10b981;
+    --background-color: #f8fafc;
+    --card-background: #ffffff;
+    --text-color: #1e293b;
+    --text-muted: #64748b;
+    --error-color: #ef4444;
+    --success-color: #10b981;
+    --border-radius: 1rem;
+    --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 3rem 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.card {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+.upload-section {
+    text-align: center;
+    padding: 3rem;
+    border: 2px dashed #e2e8f0;
+    border-radius: var(--border-radius);
+    margin-bottom: 2.5rem;
+    background: linear-gradient(to bottom right, rgba(79, 70, 229, 0.03), rgba(16, 185, 129, 0.03));
+    transition: var(--transition);
+}
+
+.upload-section:hover {
+    border-color: var(--primary-color);
+    background: linear-gradient(to bottom right, rgba(79, 70, 229, 0.05), rgba(16, 185, 129, 0.05));
+}
+
+.file-input-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-label {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    display: inline-block;
+    transition: var(--transition);
+    font-weight: 500;
+    letter-spacing: 0.025em;
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+}
+
+.file-label:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 8px -1px rgba(79, 70, 229, 0.3);
+}
+
+.results-section {
+    display: none;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.score-card {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.score {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin: 0.5rem 0;
+}
+
+.skills-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.skill-item {
+    background: linear-gradient(to right, #f8fafc, #f1f5f9);
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.skill-item:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--box-shadow);
+}
+
+.suggestions-list {
+    list-style: none;
+    padding: 0;
+}
+
+.suggestion-item {
+    padding: 1.25rem;
+    background: linear-gradient(to right, #f8fafc, #f1f5f9);
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.suggestion-item:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--box-shadow);
+}
+
+.error-message {
+    color: var(--error-color);
+    background-color: #fef2f2;
+    padding: 1.25rem;
+    border-radius: var(--border-radius);
+    margin: 1.5rem 0;
+    display: none;
+    border: 1px solid #fee2e2;
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 2rem 0;
+    }
+    
+    .container {
+        padding: 0 1.25rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .score {
+        font-size: 2.5rem;
+    }
+    
+    .upload-section {
+        padding: 2rem;
+    }
+}

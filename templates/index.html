@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AI Resume Analyzer</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<div class="container">
+		<div class="card">
+			<h1>AI Resume Analyzer</h1>
+			<div class="upload-section">
+				<div class="file-input-wrapper">
+					<input type="file" id="resumeFile" class="file-input" accept=".pdf,.docx,.doc">
+					<label for="resumeFile" class="file-label">Choose Resume</label>
+					<p id="fileName"></p>
+				</div>
+				<button id="analyzeBtn" class="file-label" onclick="analyzeResume()">Analyze Resume</button>
+			</div>
+
+			<div id="error-message" class="error-message"></div>
+
+			<div id="results" class="results-section">
+				<div class="score-card">
+					<h2>Resume Score</h2>
+					<div id="score" class="score">0</div>
+					<p>out of 100</p>
+				</div>
+
+				<div class="card">
+					<h3>Skills Found</h3>
+					<div id="skills" class="skills-section"></div>
+				</div>
+
+				<div class="card">
+					<h3>Contact Information</h3>
+					<div id="contact"></div>
+				</div>
+
+				<div class="card">
+					<h3>Suggestions for Improvement</h3>
+					<ul id="suggestions" class="suggestions-list"></ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
