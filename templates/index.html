@@ -3,21 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>AI Resume Analyzer</title>
+	<title>AI Resume Optimizer</title>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 	<div class="container">
 		<div class="card">
-			<h1>AI Resume Analyzer</h1>
+			<h1>AI Resume Optimizer</h1>
+			<p class="subtitle">Upload your resume for AI-powered analysis and optimization suggestions</p>
+			
 			<div class="upload-section">
 				<div class="file-input-wrapper">
 					<input type="file" id="resumeFile" class="file-input" accept=".pdf,.docx,.doc">
 					<label for="resumeFile" class="file-label">Choose Resume</label>
-					<p id="fileName"></p>
+					<p id="fileName" class="file-name"></p>
 				</div>
-				<button id="analyzeBtn" class="file-label" onclick="analyzeResume()">Analyze Resume</button>
+				<button id="analyzeBtn" class="analyze-btn" onclick="analyzeResume()">Analyze Resume</button>
 			</div>
 
 			<div id="error-message" class="error-message"></div>
@@ -30,18 +32,28 @@
 				</div>
 
 				<div class="card">
+					<h3>Contact Information</h3>
+					<div id="contact" class="contact-section"></div>
+				</div>
+
+				<div class="card">
 					<h3>Skills Found</h3>
 					<div id="skills" class="skills-section"></div>
 				</div>
 
 				<div class="card">
-					<h3>Contact Information</h3>
-					<div id="contact"></div>
+					<h3>Experience Analysis</h3>
+					<div id="experience" class="experience-section"></div>
 				</div>
 
 				<div class="card">
-					<h3>Suggestions for Improvement</h3>
-					<ul id="suggestions" class="suggestions-list"></ul>
+					<h3>Structure Analysis</h3>
+					<div id="structure" class="structure-section"></div>
+				</div>
+
+				<div class="card">
+					<h3>Recommendations</h3>
+					<ul id="recommendations" class="recommendations-list"></ul>
 				</div>
 			</div>
 		</div>
