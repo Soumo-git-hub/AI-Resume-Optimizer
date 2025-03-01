@@ -1,8 +1,8 @@
 ---
 
-# AI Resume Optimizer
+# AI Resume Optimizer  
 
-**AI Resume Optimizer** is a web-based application that analyzes resumes and provides an **ATS-style score** on a scale of **1 to 100**. It also suggests improvements to enhance resume effectiveness for job applications.
+**AI Resume Optimizer** is a web-based application that analyzes resumes and provides an **ATS-style score** on a scale of **1 to 100**. It also suggests improvements to enhance resume effectiveness for job applications.  
 
 ## Screenshots  
 
@@ -49,7 +49,7 @@
 3. **Create and activate a virtual environment**:  
    ```bash
    python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
    ```
 4. **Install the required dependencies**:  
    ```bash
