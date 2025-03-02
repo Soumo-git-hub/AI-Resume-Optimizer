@@ -1,5 +1,3 @@
----
-
 # AI Resume Optimizer
 
 **AI Resume Optimizer** is a web-based application that analyzes resumes and provides an **ATS-style score** on a scale of **1 to 100**. It also suggests improvements to enhance resume effectiveness for job applications.
@@ -93,6 +91,4 @@ Contributions are welcome! To contribute:
 2. **Create a new branch** for your feature or fix.  
 3. **Make your changes** and commit them with **descriptive messages**.  
 4. **Push your changes** to your **forked repository**.  
-5. **Create a pull request** to the **main repository**.  
-
----
+5. **Create a pull request** to the **main repository**. 
